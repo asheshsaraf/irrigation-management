@@ -1,0 +1,266 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Irrigation",
+		"_postman_id": "f8adf021-40bf-72d9-12b3-cb9582ea0208",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Plot Configuration",
+			"description": "",
+			"item": [
+				{
+					"name": "Create Plot Configuration",
+					"request": {
+						"url": "http://localhost:9091/customer/1/plot/a9f589d0-8290-426b-87c6-2251289ffd6a/configuration",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Ashesh Plot Configuration\",\r\n  \"description\": \"Ashesh Plot Configuration Description\",\r\n  \"soilType\": \"A\",\r\n  \"crops\": [\r\n    \"A\"\r\n  ],\r\n  \"irrigation\": [\r\n    {\r\n      \"deviceId\": \"1\",\r\n      \"waterSchedules\": [\r\n        {\r\n          \"scheduleKeyDto\": {\r\n            \"customerId\": \"1\",\r\n            \"plotId\": \"a9f589d0-8290-426b-87c6-2251289ffd6a\",\r\n            \"scheduleId\": \"c333182b-3d47-44d6-b6b5-7cab7dd80a18\"\r\n          },\r\n          \"waterAmountDto\": {\r\n            \"unit\": \"MILLILITRE_CUBE\",\r\n            \"value\": \"1000\"\r\n          }\r\n        }\r\n      ]\r\n    }\r\n  ],\r\n  \"averageMoistureLevel\": \"1\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Plot Configuration",
+					"request": {
+						"url": "http://localhost:9091/customer/1/plot",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Plot Configuration",
+					"request": {
+						"url": "http://localhost:9091/customer/1/plot/a9f589d0-8290-426b-87c6-2251289ffd6a/configuration",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Ashesh Plot Configuration\",\r\n  \"description\": \"Ashesh Plot Configuration Description\",\r\n  \"soilType\": \"A\",\r\n  \"crops\": [\r\n    \"A\"\r\n  ],\r\n  \"irrigation\": [\r\n    {\r\n      \"deviceId\": \"1\",\r\n      \"waterSchedules\": [\r\n        {\r\n          \"scheduleKeyDto\": {\r\n            \"customerId\": \"1\",\r\n            \"plotId\": \"a9f589d0-8290-426b-87c6-2251289ffd6a\",\r\n            \"scheduleId\": \"c333182b-3d47-44d6-b6b5-7cab7dd80a18\"\r\n          },\r\n          \"waterAmountDto\": {\r\n            \"unit\": \"MILLILITRE_CUBE\",\r\n            \"value\": \"1000\"\r\n          }\r\n        }\r\n      ]\r\n    }\r\n  ],\r\n  \"averageMoistureLevel\": \"1\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Schedule",
+			"description": "",
+			"item": [
+				{
+					"name": "Create Schedule",
+					"request": {
+						"url": "http://localhost:9091/customer/1/plot/a9f589d0-8290-426b-87c6-2251289ffd6a/schedule",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Ashesh Schedule\",\r\n  \"description\": \"Ashesh Schedule Description\",\r\n  \"startDateTime\": \"2022-02-23T09:00:00.000Z\",\r\n  \"endDateTime\": \"2022-02-23T10:00:00.000Z\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Schedule",
+					"request": {
+						"url": "http://localhost:9091/customer/1/plot/a9f589d0-8290-426b-87c6-2251289ffd6a/schedule/c333182b-3d47-44d6-b6b5-7cab7dd80a18",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Ashesh Schedule\",\r\n  \"description\": \"Ashesh Schedule Description\",\r\n  \"startDateTime\": \"2022-02-23T09:00:00\",\r\n  \"endDateTime\": \"2022-02-23T10:00:00\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Schedule",
+					"request": {
+						"url": "http://localhost:9091/customer/1/plot/a9f589d0-8290-426b-87c6-2251289ffd6a/schedule/c333182b-3d47-44d6-b6b5-7cab7dd80a18",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"version\": \"1645534730\",\n\"name\": \"Ashesh Schedule\",\n\"description\": \"Ashesh Schedule Description\",\n\"startDateTime\": \"2022-02-23T02:00:00\",\n\"endDateTime\": \"2022-02-23T03:00:00\"\n\t\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Plot",
+			"description": "",
+			"item": [
+				{
+					"name": "Create Plot",
+					"request": {
+						"url": "http://localhost:9091/customer/1/plot",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\": \"Ashesh Plot\",\n\"ownerId\": \"1\",\n\"size\": {\n\t\"plotUnit\": \"METER\",\n\t\"length\": \"1\",\n\t\"breadth\": \"1\"\n}\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Plot",
+					"request": {
+						"url": "http://localhost:9091/customer/1/plot",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Plot",
+					"request": {
+						"url": "http://localhost:9091/customer/1/plot/b3ea8aeb-b80f-48ff-a357-6d7721e2e0d9",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\": \"Ashesh Plot\",\n\"ownerId\": \"1\",\n\"size\": {\n\t\"plotUnit\": \"METER\",\n\t\"length\": \"10\",\n\t\"breadth\": \"100\"\n},\n\"version\": \"1645515800\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Plot",
+					"request": {
+						"url": "http://localhost:9091/customer/1/plot/b3ea8aeb-b80f-48ff-a357-6d7721e2e0d9",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\": \"Ashesh Plot\",\n\"ownerId\": \"1\",\n\"size\": {\n\t\"plotUnit\": \"METER\",\n\t\"length\": \"10\",\n\t\"breadth\": \"100\"\n},\n\"version\": \"1645515800\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Plots in System",
+					"request": {
+						"url": "http://localhost:9091/customer/1/plot",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Irrigation Status",
+			"description": "",
+			"item": [
+				{
+					"name": "GET Irrigation Status",
+					"request": {
+						"url": "http://localhost:9091/customer/1/plot/a9f589d0-8290-426b-87c6-2251289ffd6a/irrigation",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Ashesh Plot Configuration\",\r\n  \"description\": \"Ashesh Plot Configuration Description\",\r\n  \"soilType\": \"A\",\r\n  \"crops\": [\r\n    \"A\"\r\n  ],\r\n  \"irrigation\": [\r\n    {\r\n      \"deviceId\": \"1\",\r\n      \"waterSchedules\": [\r\n        {\r\n          \"scheduleKeyDto\": {\r\n            \"customerId\": \"1\",\r\n            \"plotId\": \"a9f589d0-8290-426b-87c6-2251289ffd6a\",\r\n            \"scheduleId\": \"c333182b-3d47-44d6-b6b5-7cab7dd80a18\"\r\n          },\r\n          \"waterAmountDto\": {\r\n            \"unit\": \"MILLILITRE_CUBE\",\r\n            \"value\": \"1000\"\r\n          }\r\n        }\r\n      ]\r\n    }\r\n  ],\r\n  \"averageMoistureLevel\": \"1\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

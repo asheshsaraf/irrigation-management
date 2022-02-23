@@ -1,0 +1,27 @@
+server:
+  port: 9091
+
+spring:
+  datasource:
+    url: ${POSTGRES_URL:jdbc:postgresql://localhost:5432/irrigationmanagement}
+    username: ${POSTGRES_USER:irrigationmanagement}
+    password: ${POSTGRES_PASSWORD:irrigationmanagement}
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+configuration:
+  retry-count: 5
+  prepare-seed-data:
+    run: true
+    customer-number: 2
+    plot-per-customer: 10
+    schedule-per-plot: 10
+    schedule-per-device: 5
+    irrigation-duration-in-minutes: 2
